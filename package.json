@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "webpack",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-    "prod": "npm run webpack -- --mode production",
+    "prod": "npm run webpack -- --env.mode production",
     "dev": "npm run webpack -- --mode development --watch",
     "prod:debug": "npm run debug -- --mode production",
     "dev:debug": "npm run debug -- --mode development"
@@ -32,8 +32,8 @@
     "mini-css-extract-plugin": "^0.8.0",
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
-    "typescript": "^3.5.3",
     "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.1",
     "webpack-bundle-analyzer": "^3.4.1",
