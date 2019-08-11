@@ -11,7 +11,15 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
       output: {
         filename: "bundle.js"
       },
-      plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()]
+      plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()],
+      module: {
+        rules: [
+          {
+            test: /\.jpe?g/, // We would either want to Base-64 inline this, or have it in dist.
+            use: "url-loader"
+          }
+        ]
+      }
     },
     modeConfig(mode)
   );
